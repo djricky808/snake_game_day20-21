@@ -1,6 +1,7 @@
 from turtle import Screen
 from snake import Snake
 from food import Food
+from scoreboard import Scoreboard
 import time
 
 
@@ -15,6 +16,7 @@ root.call('wm', 'attributes', '.', '-topmost', '1')
 
 snake = Snake()
 food = Food()
+score = Scoreboard()
 
 screen.listen()
 screen.onkey(snake.up,"Up")
@@ -25,6 +27,7 @@ screen.onkey(snake.right,"Right")
 game_is_on = True
 
 while game_is_on:
+    score.set_score()
     screen.update()
     time.sleep(0.1)
     snake.move()
