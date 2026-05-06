@@ -10,3 +10,6 @@ class Scoreboard(Turtle):
 
     def set_score(self):
         self.write(arg=f"Score: {self.score}",move=False, align="center", font= ('Courier', 30, "normal"))
+
+    def add_point(self):
+        self.score += 1
