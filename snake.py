@@ -1,11 +1,14 @@
-from turtle import Turtle,Screen
-import time
+from turtle import Turtle
+
+STARTING_POSITIONS = [(0,0), (-20,0), (-40,0)] #Capitalized means that this is a constant
 
 class Snake:
     def __init__(self):
-        self.starting_positions = [(0,0), (-20,0), (-40,0)]
         self.segments = []
-        for position in self.starting_positions:
+        self.create_snake()
+
+    def create_snake(self):
+        for position in STARTING_POSITIONS:
             new_segment = Turtle("square")
             new_segment.color("white")
             new_segment.penup()
