@@ -9,6 +9,9 @@ class Food(Turtle):
         self.shapesize(stretch_len=0.5, stretch_wid=0.5) #default size is 20px, this cuts the size down to 10x10
         self.color('yellow')
         self.speed('fastest')
+        self.refresh()
+
+    def refresh(self):
         random_x = random.randint(-280,280)
         random_y = random.randint(-280, 280)
         self.goto(random_x,random_y)
